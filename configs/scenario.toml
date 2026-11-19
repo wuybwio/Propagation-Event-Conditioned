@@ -1,0 +1,47 @@
+[study]
+heights_m = [120, 300, 700, 1000]
+primary_heights_m = [120, 300]
+route_sample_km = 1.0
+
+[coverage]
+probability_threshold = 0.90
+ordinary_k = 1
+critical_k = 2
+high_risk_k = 3
+
+[cost]
+# Relative scenario costs. Replace with engineering estimates when available.
+budget = 100.0
+upgrade = 1.0
+relocate = 3.0
+new_station = 5.0
+
+[radio]
+# Scenario assumptions derived from the RadioUNet++ reference setup where noted.
+# They are not measured engineering parameters of the 168 monitoring stations.
+frequency_mhz = 2500.0
+emitter_power_dbm = 23.0
+emitter_gain_dbi = 0.0
+noise_power_dbm = -114.0
+interference_power_dbm = -105.0
+required_snr_db = 6.0
+shadow_std_db = 6.0
+
+# Scenario assumptions, not measured engineering parameters of the 168 stations.
+[station_grades."2"]
+receiver_gain_dbi = 8.0
+antenna_height_m = 30.0
+sensitivity_dbm = -110.0
+required_sinr_db = 4.0
+
+[station_grades."3"]
+receiver_gain_dbi = 5.0
+antenna_height_m = 20.0
+sensitivity_dbm = -105.0
+required_sinr_db = 6.0
+
+[station_grades."4"]
+receiver_gain_dbi = 2.0
+antenna_height_m = 12.0
+sensitivity_dbm = -100.0
+required_sinr_db = 8.0

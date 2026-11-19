@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jiangxi-low-altitude-radio-planning"
+version = "0.1.0"
+description = "Physics-guided probabilistic radio maps and route-aware monitoring-station planning"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=2.0",
+  "pandas>=2.2",
+]
+
+[project.optional-dependencies]
+full = [
+  "scipy>=1.14",
+  "scikit-learn>=1.5",
+  "shapely>=2.0",
+  "pyproj>=3.7",
+  "rasterio>=1.4",
+  "geopandas>=1.0",
+  "ortools>=9.11",
+  "torch>=2.7",
+]
+test = ["pytest>=8.3"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
